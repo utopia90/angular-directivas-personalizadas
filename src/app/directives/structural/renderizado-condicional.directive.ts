@@ -17,7 +17,7 @@ export class RenderizadoCondicionalDirective {
       // Crear un espacio (vista) con el contenido del TemplateRef
       // Que básicamente, es el elemento (div, por ejemplo) al que se le aplica
       // la directiva
-      this.viewContainer.createEmbeddedView(this.templateRef);
+      this.viewContainer.createEmbeddedView(this.templateRef); // Pinta el elemento
       this.mostrado = true;
     } else if (condicion && this.mostrado){
       // Eliminar el elemento de la vista, haremos un clear()
