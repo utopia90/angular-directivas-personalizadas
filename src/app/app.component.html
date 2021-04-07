@@ -310,6 +310,7 @@
 
 <div class="content" role="main">
   <!-- Ejemplo de Directiva de Atributo -->
+  <h2> Directiva de Atributo</h2>
   <h3>Elige el color de subrayado:</h3>
   <div>
     <input type="radio" name="colores" id="1" (click)="color = 'lightgreen'" >Verde
@@ -320,7 +321,7 @@
   <div>
     <h4>Textos:</h4>
 
-    <!-- TODO: Aplicar la Directiva -->
+    <!-- Directiva Aplicada -->
     <p [appSubrayado]="color" >
       Texto a Subrayar sin color por defecto
     </p>
@@ -328,6 +329,25 @@
       Texto a Subrayar con un color por defecto
     </p>
   </div>
+
+  <!-- Ejemplo de Directiva de Atributo -->
+  <h2> Directiva Estructural</h2>
+
+  <!-- Directiva Estrucural aplicada a un elemento -->
+  <p *appRenderizadoCondicional="condicion">
+    Frase Secreta
+  </p>
+
+  <!-- Directiva Estructural aplicada a un Ng-Template -->
+  <ng-template [appRenderizadoCondicional]="condicion">
+    <p>
+      Otra frase secreta
+    </p>
+  </ng-template>
+
+  <button (click)="cambiarVisibilidad()">
+    {{condicion ? 'Mostrar Secreto' : 'Ocultar Secreto'}}
+  </button>
 
 </div>
 
